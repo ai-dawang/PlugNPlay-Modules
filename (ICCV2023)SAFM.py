@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-#https://github.com/Zheng-MJ/SMFANet
-#论文：
+#https://github.com/sunny2109/SAFMN
+#论文：https://arxiv.org/pdf/2302.13800
 class SAFM(nn.Module):
     def __init__(self, dim, n_levels=4):
         super().__init__()
