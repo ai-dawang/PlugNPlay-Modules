@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-#GitHub地址： https://github.com/sunny2109/SAFMN
+#GitHub地址： https://github.com/Zheng-MJ/SMFANet
 #论文地址：https://openaccess.thecvf.com/content/ICCV2023/papers/Sun_Spatially-Adaptive_Feature_Modulation_for_Efficient_Image_Super-Resolution_ICCV_2023_paper.pdf
 class DMlp(nn.Module):
     def __init__(self, dim, growth_rate=2.0):
