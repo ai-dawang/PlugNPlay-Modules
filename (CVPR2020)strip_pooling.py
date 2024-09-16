@@ -62,7 +62,7 @@ class StripPooling(nn.Module):
         return F.relu_(x + out)
 
 
-# 输入 N C H W,  输出 N C H W
+# 输入 B C H W,  输出 B C H W
 if __name__ == '__main__':
     block = StripPooling(64, (20, 12), nn.BatchNorm2d, {'mode': 'bilinear', 'align_corners': True})
     input = torch.rand(3, 64, 32, 32)
