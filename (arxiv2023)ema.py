@@ -32,7 +32,7 @@ class EMA(nn.Module):
         return (group_x * weights.sigmoid()).reshape(b, c, h, w)
 
 
-# 输入 N C HW,  输出 N C H W
+# 输入 B C H W,  输出 B C H W
 if __name__ == '__main__':
     block = EMA(64).cuda()
     input = torch.rand(1, 64, 64, 64).cuda()
