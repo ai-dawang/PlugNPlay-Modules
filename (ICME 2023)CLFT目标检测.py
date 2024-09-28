@@ -3,19 +3,7 @@ import torch.nn as nn
 from einops import rearrange
 #论文：ABC: Attention with Bilinear Correlation for Infrared Small Target Detection ICME2023
 #论文地址：https://arxiv.org/pdf/2303.10321
-"""
-摘要的翻译：
-红外小目标检测（ISTD）在预警、救援和引导等方面有着广泛的应用。
-然而，基于CNN的深度学习方法对缺乏清晰轮廓和纹理特征的红外小目标（IRST）分割效果不佳，而基于Transformer的方法由于缺乏卷积诱导偏差也难以取得显著的效果。
-为了解决这些问题，我们提出了一种新的模型，称为双线性相关注意模型（ABC），该模型基于Transformer架构，包括一个卷积线性融合Transformer（CLFT）模块，
-该模块具有用于特征提取和融合的新型注意机制，可有效增强目标特征并抑制噪声。此外，我们的模型包括一个位于网络较深层的U形卷积-扩张卷积（UCDC）模块，
-它利用较深层特征的较小分辨率来获得更精细的语义信息。在公共数据集上的实验结果表明，我们的方法达到了最先进的性能。
 
-本文的主要贡献如下：
-1）基于 Transformer 结构设计的 CLFT 模块可以有效增强目标特征并抑制噪声。
-2）UCDC 模块充分利用了深度特征的特点，可以更精细地处理网络的深度特征。
-3）所提出的方法在所有现有的公开数据集上都达到了最佳性能。
-"""
 def conv_relu_bn(in_channel, out_channel, dirate):
     return nn.Sequential(
         nn.Conv2d(in_channels=in_channel, out_channels=out_channel, kernel_size=3, stride=1, padding=dirate,
