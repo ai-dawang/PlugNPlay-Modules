@@ -2,21 +2,7 @@ import torch.nn as nn
 import torch
 import torch.nn.functional as F
 # 论文：Xception: Deep Learning with Depthwise Separable Convolutions
-"""
-深度可分离卷积（Depthwise Separable Convolution）是一种卷积神经网络（CNN）中的特殊类型的卷积操作，旨在减少模型参数量和计算量，从而提高模型的效率和性能。
 
-传统的卷积操作在每个输入通道上使用一个滤波器（也称为卷积核）来进行滤波操作，这意味着每个输入通道都有自己的滤波器集合。
-而深度可分离卷积将这个操作拆分成两个步骤：深度卷积和逐点卷积。
-
-1. **深度卷积（Depthwise Convolution）**：深度卷积阶段对输入的每个通道应用一个单独的滤波器。
-这意味着对于输入的每个通道，都有一个对应的滤波器集合来进行卷积操作。这一步骤不会改变输入数据的通道数。
-
-2. **逐点卷积（Pointwise Convolution）**：逐点卷积阶段使用1x1的卷积核对深度卷积的输出进行卷积操作。
-这个操作可以看作是传统的卷积操作，但是它是在每个像素点上进行的，而不是在整个图像上。逐点卷积的作用是将深度卷积的输出映射到新的特征空间，通过组合不同的通道信息来生成最终的特征图。
-
-深度可分离卷积的优势在于它显著减少了模型的参数数量和计算量，因为它使用了更少的滤波器和更少的操作。
-这使得它在资源有限的环境下更加适用，例如移动设备和嵌入式系统。同时，深度可分离卷积在一些任务上还能够提高模型的性能和泛化能力，因为它可以更好地捕获和利用特征之间的相关性。
-"""
 
 def get_dwconv(dim, kernel=7, bias=False):
     return nn.Conv2d(dim, dim, kernel_size=7, padding=(kernel-1)//2 ,bias=bias, groups=dim)
