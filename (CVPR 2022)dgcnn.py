@@ -1,8 +1,7 @@
 import torch
 import torch.nn.functional as F
 
-# 论文：MonoDTR: Monocular 3D Object Detection with Depth-Aware Transformer
-# 论文地址：https://arxiv.org/pdf/2203.13310
+
 def knn(x, k):
     inner = -2 * torch.matmul(x.transpose(2, 1).contiguous(), x)
     xx = torch.sum(x ** 2, dim=1, keepdim=True)
