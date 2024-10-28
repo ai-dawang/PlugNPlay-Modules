@@ -7,7 +7,4 @@
 
 目前主要更新二维图像模块，所有二维图像都可以用，图像分类、分割、目标检测、超分辨率重建、图像去雾、暗光增强等所有图像任务都可以用   3d模块 和1d模块 后续会陆续更新。
 
-
-![image-20240906165609184](https://github.com/user-attachments/assets/e3a2039e-1d9e-4443-80e3-24fcf66a0481)
-
 ![aae37e8f13bc88eb6aca66535d49a7e](https://github.com/user-attachments/assets/5ef15cf3-745b-4cab-ab19-7d0147bfcd24)
