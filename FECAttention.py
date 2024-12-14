@@ -86,5 +86,5 @@ if __name__ == '__main__':
     input = torch.rand(8, 7, 96)
     block = dct_channel_block(96)
     result = block(input)
-    print(input.size())
-    print(result.size())
+    print("input_tensor.shape:", input.shape)
+    print("result.shape:", result.shape)
