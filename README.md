@@ -7,7 +7,7 @@
 
 目前主要更新二维图像模块，所有二维图像都可以用，图像分类、分割、目标检测、超分辨率重建、图像去雾、暗光增强等所有图像任务都可以用   3d模块 和1d模块 后续会陆续更新。
 
-![aae37e8f13bc88eb6aca66535d49a7e](https://github.com/user-attachments/assets/5ef15cf3-745b-4cab-ab19-7d0147bfcd24)
+[![aae37e8f13bc88eb6aca66535d49a7e](https://github.com/user-attachments/assets/5ef15cf3-745b-4cab-ab19-7d0147bfcd24)](https://github.com/ai-dawang/PlugNPlay-Modules/blob/b3b8238940bf31c50020c81279a15250e8419c8a/assets/18b0c599180d157e714daf7f21b1fdc.jpg)
 
 这里我介绍一下，加入深度学习论文指南:
 第一，如果你是新手小白，代码论文都看不懂，我们会给出最优的学习路线，让你少走弯路，节省很多时间。
